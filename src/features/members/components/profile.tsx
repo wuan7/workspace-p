@@ -38,7 +38,9 @@ export const Profile = ({ memberId, onClose }: ProfileProps) => {
 
     const { data: member, isLoading: isLoadingMember} = useGetMember({id : memberId});
     const { data: currentMember, isLoading: isLoadingCurrentMember } = useCurrentMember({workspaceId});
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { mutate: updateMember, isPending: isUpdatingMember } = useUpdateMember();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { mutate: removeMember, isPending: isRemovingMember } = useRemoveMember();
 
     const onRemove = async () => {

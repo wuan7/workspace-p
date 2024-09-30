@@ -8,7 +8,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Loader, Plus } from "lucide-react";
@@ -16,7 +15,9 @@ import { Loader, Plus } from "lucide-react";
 export const WorkspaceSwitcher = () => {
   const router = useRouter();
   const workspaceId = useWorkspaceId();
-  const [_open, setOpen] = useCreateWorkspaceModal();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [open, setOpen] = useCreateWorkspaceModal();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { data: workspaces, isLoading: workspacesLoading } = useGetWorkspaces();
   const { data: workspace, isLoading: workspaceLoading } = useGetWorkspace({
     id: workspaceId,
